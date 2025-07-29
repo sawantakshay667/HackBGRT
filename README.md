@@ -55,7 +55,7 @@ The *shim* boot loader is maintained by Red Hat, Inc, and the included signed co
 	* `arch=...` – force architecture.
 	* `esp=...` – force EFI System Partition path.
 	* `dry-run` – skip actual changes.
-* For example, run `setup.exe batch install allow-secure-boot enable-overwrite` to copy files and overwrite the MS boot loader regardless of Secure Boot status.
+* For example, `setup.exe batch disable install enable-bcdedit` would disable any previous installation, then install the files and create the EFI boot entry with `bcdedit`.
 
 ### Multi-boot configurations
 
