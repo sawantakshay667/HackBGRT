@@ -457,7 +457,7 @@ public class Setup {
 		if (bcdeditEnum.ExitCode != 0) {
 			if (bcdeditEnum.Output != null) {
 				var lines = bcdeditEnum.Output.Split("\n".ToCharArray());
-				var lastLine = lines.Select(s => s != "").Last();
+				var lastLine = lines.Where(s => s != "").Last();
 				WriteLine($"BCDEdit failed with: {lastLine}");
 			}
 			WriteLine("BCDEdit failed. See README for further information.");
