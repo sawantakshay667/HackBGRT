@@ -268,7 +268,7 @@ public class EfiBootEntries {
 			}
 			ownEntry = msEntry;
 			ownEntry.Arguments = new byte[0];
-			ownEntry.Label = "HackBGRT";
+			ownEntry.Label = Setup.BootEntryLabel;
 			ownEntry.FileName = OwnLoaderPath;
 		}
 		ownEntry.Attributes = 1; // LOAD_OPTION_ACTIVE
